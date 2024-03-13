@@ -1,0 +1,1 @@
+export const INVALID_NUMBER_TEXT = 'Insira um número válido (utilize ponto para casas decimais)'

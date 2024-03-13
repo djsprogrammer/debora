@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+    animation: load 1s infinite;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.logo {
+    font-family: 'Satisfy';
+}
+
+.table-container {
+    display: block;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.form-bg {
+    background-color: rgb(240, 240, 240);
+}
+
+form {
+    width: 350px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+#chart {
+    width: 40%;
+    margin: auto;
+}
