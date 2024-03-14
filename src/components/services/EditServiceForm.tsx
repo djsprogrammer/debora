@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { generateNewValue } from 'formFunctions/service/common'
+import { generateNewValue, notify } from 'formFunctions/service/common'
 import { checkForValueInTheSameDate } from 'formFunctions/service/editService'
 import { validNumber, orderServices } from 'formFunctions/common'
 import { INVALID_NUMBER_TEXT } from 'constants/errors'
@@ -45,7 +45,7 @@ const EditServiceForm = ({ servicesState, serviceForEdition, setEditServiceForm 
 				localStorage.setItem('services', JSON.stringify(orderServices([...otherServices, serviceForEdition])))
 				setEditServiceForm(false)
 			} else {
-				alert(INVALID_NUMBER_TEXT)
+				notify(INVALID_NUMBER_TEXT)
 				setEditServiceForm(false)
 			}
 		}

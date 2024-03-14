@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react'
 
-import { generateNewValue } from 'formFunctions/service/common'
+import { generateNewValue, notify } from 'formFunctions/service/common'
 import { validNumber, orderServices } from 'formFunctions/common'
 import { INVALID_NUMBER_TEXT } from 'constants/errors'
 
@@ -62,12 +62,12 @@ const AddServiceForm = ({ setAddServiceForm }: Props) => {
                     setBlockedActions(false)
                     setAddServiceForm(false)
                 } else {
-                    alert(INVALID_NUMBER_TEXT)
+                    notify(INVALID_NUMBER_TEXT)
                     setBlockedActions(false)
                     setAddServiceForm(false)
                 }
             } else {
-                alert(ALREADY_EXISTS_TEXT)
+                notify(ALREADY_EXISTS_TEXT)
                 setBlockedActions(false)
                 setAddServiceForm(false)
             }
