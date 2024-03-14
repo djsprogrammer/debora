@@ -12,6 +12,7 @@ import ValueInput from 'components/forms/ValueInput'
 import ConfirmFormButtons from 'components/pages/ConfirmFormButtons'
 
 import { DocsContext } from 'DocsContext'
+import { notify } from 'formFunctions/service/common'
 
 interface AddExpenseFormProps {
 	setAddExpenseForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -43,7 +44,7 @@ const AddExpenseForm = ({ setAddExpenseForm }: AddExpenseFormProps) => {
 					return expense.name === newExpense.name && expense.date === newExpense.date
 				})[0]
 				if (alreadyExists) {
-					alert('Já existe uma despesa igual a essa')
+					notify('Já existe uma despesa igual a essa!')
 					setAddExpenseForm(false)
 					setBlockedActions(false)
 				} else {
@@ -57,7 +58,7 @@ const AddExpenseForm = ({ setAddExpenseForm }: AddExpenseFormProps) => {
 					setBlockedActions(false)
 				}
 			} else {
-				alert(INVALID_NUMBER_TEXT)
+				notify(INVALID_NUMBER_TEXT)
 				setAddExpenseForm(false)
 				setBlockedActions(false)
 			}
