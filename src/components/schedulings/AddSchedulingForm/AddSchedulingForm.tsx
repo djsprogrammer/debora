@@ -15,6 +15,7 @@ import ConfirmFormButtons from 'components/pages/ConfirmFormButtons'
 import SchedulingInfo from './SchedulingInfo'
 
 import { DocsContext } from 'DocsContext'
+import { notify } from 'formFunctions/service/common'
 
 interface AddSchedulingFormProps {
 	setAddSchedulingForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -95,7 +96,7 @@ const AddSchedulingForm = ({ setAddSchedulingForm }: AddSchedulingFormProps) => 
 				return current.client === scheduling.client && current.date === scheduling.date
 			})[0]
 			if (alreadyExists) {
-				alert('Já existe um agendamento para essa pessoa nessa data')
+				notify('Já existe um agendamento para essa pessoa nessa data')
 				setBlockedActions(false)
 				setAddSchedulingForm(false)
 			} else {
