@@ -6,8 +6,3 @@ export const generateNewValue = (value: string) => {
         date: getCurrentDate()
     }
 }
-
-export const notify = async (text: string) => {
-    await Notification.requestPermission()
-    new Notification(text)
-}

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
-import { generateNewValue, notify } from 'formFunctions/service/common'
+import { generateNewValue } from 'formFunctions/service/common'
 import { checkForValueInTheSameDate } from 'formFunctions/service/editService'
-import { validNumber, orderServices } from 'formFunctions/common'
+import { validNumber, orderServices, notify } from 'formFunctions/common'
 import { INVALID_NUMBER_TEXT } from 'constants/errors'
 
 import { Service, ServicesState, Value } from 'types/services'

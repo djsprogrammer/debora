@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react'
 
-import { generateNewValue, notify } from 'formFunctions/service/common'
-import { validNumber, orderServices } from 'formFunctions/common'
+import { generateNewValue } from 'formFunctions/service/common'
+import { validNumber, orderServices, notify } from 'formFunctions/common'
 import { INVALID_NUMBER_TEXT } from 'constants/errors'
 
 import { Service } from 'types/services'

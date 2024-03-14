@@ -15,7 +15,7 @@ import ConfirmFormButtons from 'components/pages/ConfirmFormButtons'
 import SchedulingInfo from './SchedulingInfo'
 
 import { DocsContext } from 'DocsContext'
-import { notify } from 'formFunctions/service/common'
+import { notify } from 'formFunctions/common'
 
 interface AddSchedulingFormProps {
 	setAddSchedulingForm: React.Dispatch<React.SetStateAction<boolean>>

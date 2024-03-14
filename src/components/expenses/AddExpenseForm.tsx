@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { v4 } from 'uuid'
 
-import { validNumber } from 'formFunctions/common'
+import { validNumber, notify } from 'formFunctions/common'
 import { INVALID_NUMBER_TEXT } from 'constants/errors'
 
 import Container from 'components/forms/Container'
@@ -12,7 +12,6 @@ import ValueInput from 'components/forms/ValueInput'
 import ConfirmFormButtons from 'components/pages/ConfirmFormButtons'
 
 import { DocsContext } from 'DocsContext'
-import { notify } from 'formFunctions/service/common'
 
 interface AddExpenseFormProps {
 	setAddExpenseForm: React.Dispatch<React.SetStateAction<boolean>>

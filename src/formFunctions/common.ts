@@ -46,3 +46,8 @@ export const getCurrentMonth = () => {
     const currentMonth = String(new Date().getMonth() + 1).padStart(2, '0')
     return `${currentYear}-${currentMonth}`
 }
+
+export const notify = async (text: string) => {
+    await Notification.requestPermission()
+    new Notification(text)
+}
