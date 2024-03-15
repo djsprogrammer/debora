@@ -5,7 +5,7 @@ const isDev = require('electron-is-dev')
 
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
-    icon: path.join(__dirname, '../icon.png'),
+    icon: path.join(__dirname, '../icon.ico'),
     width: 1000,
     height: 800,
     webPreferences: {
