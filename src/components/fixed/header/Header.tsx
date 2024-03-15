@@ -7,8 +7,7 @@ interface HeaderProps {
 const Header = ({ currentPage }: HeaderProps) => {
 
     return (
-        <header className='text-bg-dark py-1 px-2 d-flex justify-content-between'>
-            <h5 className='logo pt-1'>Débora Bento</h5>
+        <header className='d-flex justify-content-center'>
             <Navegation currentPage={currentPage} />
         </header>
     )

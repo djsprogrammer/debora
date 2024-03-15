@@ -26,23 +26,21 @@ const Navegation = ({ currentPage }: NavegationProps) => {
 		const selectedLink = getSelectedLink(currentPage)
 		const unselectedLinks = getUnselectedLinks(currentPage)
 		if (selectedLink) {
-			selectedLink.classList.add('link-underline-opacity-100')
+			selectedLink.style.backgroundColor = '#F9405F'
 			for (const link of unselectedLinks) {
 				if (link.current) {
-					link.current.classList.remove('link-underline-opacity-100')
+					link.current.style.backgroundColor = '#f8546f'
 				}
 			}
 		}
 	}, [currentPage, getSelectedLink, getUnselectedLinks])
 
-	const linkStyle = 'link-light link-underline-opacity-0'
-
 	return (
-		<nav className='d-flex align-items-center'>
-			<Link ref={link1} className={`${linkStyle} me-3`} to='/'>Informações</Link>
-			<Link ref={link2} className={linkStyle} to='/schedulings'>Agendamento</Link>
-			<Link ref={link3} className={`${linkStyle} mx-3`} to='/expenses'>Despesa</Link>
-			<Link ref={link4} className={linkStyle} to='/services'>Serviço</Link>
+		<nav style={{ borderLeft: '1px solid white', borderRight: '1px solid white' }} className='d-flex align-items-center'>
+			<Link ref={link1} className='p-2' to='/'>Informações</Link>
+			<Link ref={link2} className='p-2' to='/schedulings'>Agendamento</Link>
+			<Link ref={link3} className='p-2' to='/expenses'>Despesa</Link>
+			<Link ref={link4} className='p-2' to='/services'>Serviço</Link>
 		</nav>
 	)
 	
