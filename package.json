@@ -1,10 +1,10 @@
 {
   "name": "debora",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "public/electron.js",
   "homepage": "./",
   "author": {
-    "name": "Deivid de Jesus",
+    "name": "DJS Programmer",
     "email": "djs.programmer@gmail.com"
   },
   "description": "Aplicativo desktop para uma lash designer",
@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "electron": "electron .",
+    "dev": "electron .",
     "build": "react-scripts build && electron-builder -w -c.extraMetadata.main=build/electron.js"
   },
   "build": {
